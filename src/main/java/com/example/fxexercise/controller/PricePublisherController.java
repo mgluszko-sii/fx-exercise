@@ -28,13 +28,4 @@ public class PricePublisherController {
         return PriceDTO.fromPrice(price);
     }
 
-    @GetMapping("/prices")
-    public String getPriceByInstrumentName(){
-        return "kopytko";
-    }
-
-    @GetMapping("/prices/a/{instrumentName}")
-    public String getInstrumentName(@PathVariable String instrumentName){
-        return instrumentName;
-    }
 }
