@@ -4,8 +4,6 @@ import com.example.fxexercise.message.converter.MessageConverter;
 import com.example.fxexercise.repository.Price;
 import com.example.fxexercise.services.PriceService;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

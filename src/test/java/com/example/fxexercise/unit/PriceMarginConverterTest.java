@@ -1,14 +1,13 @@
 package com.example.fxexercise.unit;
 
-import com.example.fxexercise.services.PriceMarginApplier;
-import org.junit.jupiter.api.BeforeAll;
+import com.example.fxexercise.services.PriceMarginConverter;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class PriceMarginApplierTest {
+public class PriceMarginConverterTest {
 
     @Autowired
-    private PriceMarginApplier applier;
+    private PriceMarginConverter applier;
 
 
     @Test
