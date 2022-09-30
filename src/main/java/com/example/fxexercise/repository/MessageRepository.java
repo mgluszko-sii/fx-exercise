@@ -5,6 +5,7 @@ import java.util.Optional;
 
 public interface MessageRepository<T> {
 
-    void putItem(Object key, T item);
-    Optional<T> getItem(Object key);
+    void putItemIfLatest(T item);
+    Optional<T> getLatestItem(Object key);
+
 }
