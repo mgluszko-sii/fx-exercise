@@ -1,22 +1,24 @@
-package com.example.fxexercise.model.dto;
+package com.example.fxexercise.controller;
 
-import com.example.fxexercise.model.Price;
+import com.example.fxexercise.repository.Price;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+
+import java.math.BigDecimal;
 
 @Getter
 @Builder
 @AllArgsConstructor
 public class PriceDTO {
 
-    private final String bid;
-    private final String ask;
+    private final BigDecimal bid;
+    private final BigDecimal ask;
 
     public static PriceDTO fromPrice(Price price){
         return PriceDTO.builder()
-                .ask(price.getAsk().toPlainString())
-                .bid(price.getBid().toPlainString())
+                .ask(price.getAsk())
+                .bid(price.getBid())
                 .build();
     }
 }

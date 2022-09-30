@@ -2,7 +2,7 @@ package com.example.fxexercise.subscriber;
 
 import com.example.fxexercise.message.converter.MessageConverter;
 import com.example.fxexercise.message.reader.MessageReader;
-import com.example.fxexercise.model.Price;
+import com.example.fxexercise.repository.Price;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;

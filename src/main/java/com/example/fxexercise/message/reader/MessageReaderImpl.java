@@ -1,8 +1,9 @@
 package com.example.fxexercise.message.reader;
 
 import com.example.fxexercise.message.converter.MessageConverter;
-import com.example.fxexercise.model.Price;
+import com.example.fxexercise.repository.Price;
 import com.example.fxexercise.services.PriceService;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,7 @@ import java.io.BufferedReader;
 import java.io.StringReader;
 
 @Component
-@Setter
-@NoArgsConstructor
+@AllArgsConstructor
 public class MessageReaderImpl implements MessageReader<String, Price> {
 
     @Autowired

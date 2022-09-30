@@ -1,4 +1,4 @@
-package com.example.fxexercise.model;
+package com.example.fxexercise.repository;
 
 import lombok.Builder;
 import lombok.Data;

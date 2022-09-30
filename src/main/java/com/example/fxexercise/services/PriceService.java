@@ -1,7 +1,8 @@
 package com.example.fxexercise.services;
 
-import com.example.fxexercise.model.Price;
+import com.example.fxexercise.repository.Price;
 import com.example.fxexercise.repository.MessageRepository;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-@Setter
-@NoArgsConstructor
+@AllArgsConstructor
 public class PriceService {
 
     @Autowired
@@ -20,12 +20,12 @@ public class PriceService {
     private PriceMarginApplier marginApplier;
 
     public Optional<Price> getPriceForInstrument(String instrumentName) {
-        return repository.getItem(instrumentName);
+        return repository.getLatestItem(instrumentName);
     }
 
     public void addPrice(Price price) {
         Price marginedPrice = marginApplier.convert(price);
-        repository.putItem(marginedPrice.getInstrument(), marginedPrice);
+        repository.putItemIfLatest(marginedPrice);
     }
 
 }

@@ -1,6 +1,6 @@
 package com.example.fxexercise.services;
 
-import com.example.fxexercise.model.Price;
+import com.example.fxexercise.repository.Price;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,8 +1,7 @@
 package com.example.fxexercise.controller;
 
 
-import com.example.fxexercise.model.Price;
-import com.example.fxexercise.model.dto.PriceDTO;
+import com.example.fxexercise.repository.Price;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +22,7 @@ public class PricePublisherController {
     public PriceDTO getPriceByInstrumentName(@PathVariable String instrumentName){
         Optional<Price> priceOptional = messageService.getPriceForInstrument(instrumentName);
         Price price = priceOptional.orElseThrow(() -> new ResponseStatusException(
-                HttpStatus.NOT_FOUND, "entity not found"));
+                HttpStatus.NOT_FOUND, String.format("Price for instrument %S not found", instrumentName)));
 
         return PriceDTO.fromPrice(price);
     }
