@@ -15,13 +15,14 @@ import java.time.format.DateTimeFormatter;
 @SpringBootTest
 public class MessageConverterImplTest {
 
+    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss:SSS");
+
     @Autowired
     private MessageConverterImpl converter;
 
     @Test
     public void convertCorrectData(){
         //given
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss:SSS");
         String message = "106,EUR/USD,1.1000,1.2000,01-06-2020 12:01:01:001";
         Price expectedPrice = Price.builder()
                 .id("106")
