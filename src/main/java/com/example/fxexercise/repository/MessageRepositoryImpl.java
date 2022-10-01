@@ -23,5 +23,8 @@ public class MessageRepositoryImpl implements MessageRepository<Price> {
         return Optional.ofNullable(cache.get(key));
     }
 
-
+    @Override
+    public void clear() {
+        cache.clear();
+    }
 }

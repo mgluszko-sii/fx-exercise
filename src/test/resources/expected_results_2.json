@@ -1,0 +1,17 @@
+[
+  {
+    "instrument": "EUR/USD",
+    "bid": 0.9990,
+    "ask": 2.0020
+  },
+  {
+    "instrument": "GBP/USD",
+    "bid": 1.1988,
+    "ask": 1.3013
+  },
+  {
+    "instrument": "EUR/JPY",
+    "bid": 129.4804,
+    "ask": 130.0399
+  }
+]

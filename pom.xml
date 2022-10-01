@@ -19,7 +19,9 @@
 		<maven.compiler.source>11</maven.compiler.source>
 		<lombok.version>1.18.24</lombok.version>
 		<junit.version>5.8.1</junit.version>
+		<jackson.version>2.13.4</jackson.version>
 		<assertj.version>3.23.1</assertj.version>
+		<commons-io.version>2.11.0</commons-io.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,10 +53,16 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${commons-io.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 </project>
